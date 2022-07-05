@@ -6,31 +6,31 @@ html,
 body {
   background-color: #333;
   color: #f2f2f2;
-  font-family: Helvatica, Roboto, Arial, sans-serif;
-  text-align: center;
-  height: 100%;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
+  font-family: Helvatica, Roboto, Arial, sans-serif;
+  height: 100%;
+  text-align: center;
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
 }
 nav {
-  z-index: 10;
   align-items: center;
   background-color: #222;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  left: 0;
+  padding: 1.3rem;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  padding: 1.3rem;
+  z-index: 10;
 }
 nav * {
   margin: 0.3rem;
@@ -53,11 +53,26 @@ a:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+a.buy {
+  background: linear-gradient(to right,#28c 0% ,#2c8 100% );
+  background: -webkit-linear-gradient(to right,#28c 0% ,#2c8 100% );
+  background-size: 200%;
+  background-position: left;
+  padding: 0.7rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+a.buy:hover {
+  text-shadow: none;
+  color: #f2f2f2;
+  background-position: right;
+}
 main {
-  margin-top: 6rem;
   -ms-flex: 1 0 auto;
   -webkit-flex: 1 0 auto;
   flex: 1 0 auto;
+  margin-top: 6rem;
 }
 img.halloffame {
   opacity: 0;
@@ -126,7 +141,8 @@ h3 {
   text-transform: capitalize;
 }
 section.dl li:nth-child(1) h2 {
-  background: linear-gradient(to right, #ffa600 0%, #fff600 100%);
+  background: linear-gradient(to right,#ffa600 0% ,#fff600 100% );
+  background: -webkit-linear-gradient(to right,#ffa600 0% ,#fff600 100% );
   text-shadow: -0.1rem -0.1rem 2rem rgba(255,166,0,0.502), 0.1rem 0.1rem 2rem rgba(255,230,0,0.502);
   color: transparent;
   -moz-background-clip: text;
@@ -134,7 +150,8 @@ section.dl li:nth-child(1) h2 {
   background-clip: text;
 }
 section.dl li:nth-child(2) h2 {
-  background: linear-gradient(to left, #8cc1ca 0%, #8a88ff 100%);
+  background: linear-gradient(to left,#8cc1ca 0% ,#8a88ff 100% );
+  background: -webkit-linear-gradient(to left,#8cc1ca 0% ,#8a88ff 100% );
   text-shadow: -0.1rem -0.1rem 2rem rgba(138,136,255,0.502), 0.1rem 0.1rem 2rem rgba(140,193,202,0.502);
   color: transparent;
   -moz-background-clip: text;
@@ -177,9 +194,9 @@ li span img {
   border-radius: 0.5rem;
 }
 .error {
-  text-shadow: 0px 0px #f63, 0rem 0rem hsla(0,100%,60%,1), 0.06666666666666667rem 0.06666666666666667rem hsla(2,100%,60%,1), 0.13333333333333333rem 0.13333333333333333rem hsla(4,100%,60%,1), 0.2rem 0.2rem hsla(6,100%,60%,1), 0.26666666666666666rem 0.26666666666666666rem hsla(8,100%,60%,1), 0.3333333333333333rem 0.3333333333333333rem hsla(10,100%,60%,1), 0.4rem 0.4rem hsla(12,100%,60%,1), 0.4666666666666667rem 0.4666666666666667rem hsla(14,100%,60%,1), 0.5333333333333333rem 0.5333333333333333rem hsla(16,100%,60%,1), 0.6rem 0.6rem hsla(18,100%,60%,1), 0.6666666666666666rem 0.6666666666666666rem hsla(20,100%,60%,1), 0.7333333333333333rem 0.7333333333333333rem hsla(22,100%,60%,1), 0.8rem 0.8rem hsla(24,100%,60%,1), 0.8666666666666667rem 0.8666666666666667rem hsla(26,100%,60%,1), 0.9333333333333333rem 0.9333333333333333rem hsla(28,100%,60%,1), 1rem 1rem hsla(30,100%,60%,1);
-  margin-right: 1rem;
   margin-bottom: 1rem;
+  margin-right: 1rem;
+  text-shadow: 0px 0px #f63, 0rem 0rem hsla(0,100%,60%,1), 0.06666666666666667rem 0.06666666666666667rem hsla(2,100%,60%,1), 0.13333333333333333rem 0.13333333333333333rem hsla(4,100%,60%,1), 0.2rem 0.2rem hsla(6,100%,60%,1), 0.26666666666666666rem 0.26666666666666666rem hsla(8,100%,60%,1), 0.3333333333333333rem 0.3333333333333333rem hsla(10,100%,60%,1), 0.4rem 0.4rem hsla(12,100%,60%,1), 0.4666666666666667rem 0.4666666666666667rem hsla(14,100%,60%,1), 0.5333333333333333rem 0.5333333333333333rem hsla(16,100%,60%,1), 0.6rem 0.6rem hsla(18,100%,60%,1), 0.6666666666666666rem 0.6666666666666666rem hsla(20,100%,60%,1), 0.7333333333333333rem 0.7333333333333333rem hsla(22,100%,60%,1), 0.8rem 0.8rem hsla(24,100%,60%,1), 0.8666666666666667rem 0.8666666666666667rem hsla(26,100%,60%,1), 0.9333333333333333rem 0.9333333333333333rem hsla(28,100%,60%,1), 1rem 1rem hsla(30,100%,60%,1);
   font-size: 2rem;
 }
 .moderator {
