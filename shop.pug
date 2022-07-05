@@ -1,0 +1,12 @@
+---
+title: Магазин
+---
+//- -var id = 1
+mixin item(name,price)
+	section
+		h2 #{name} #{price}₽
+		p что-бы заказать введите в сообщении *ваш ник на gdps*
+		sub потом напишите Arti или Wowbin в лс что-бы они вам его выдали
+		a.buy(href="https://www.donationalerts.com/r/wowbinds_donat_") Купить
+		//- -id = id + 1
++item("Модератор",50)
