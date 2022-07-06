@@ -1,7 +1,7 @@
 (function() {
   var allTags, currentLang, langSwithcer, switchLang;
 
-  if (localStorage === void 0 || localStorage === null) {
+  if (isNaN(localStorage)) {
     localStorage.setItem("language", "ru");
   }
 
