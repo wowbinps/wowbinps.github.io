@@ -1,6 +1,5 @@
 plugins:
   - jekyll-coffeescript
-  - jekyll-pug
 stylus:
   compress: true
   path: ./styles/
