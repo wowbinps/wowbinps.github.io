@@ -6,6 +6,6 @@ stylus:
   path: ./styles/
 defaults:
   - scope:
-      path: "*.html"
+      path: "*.pug"
     values:
       layout: "default"
