@@ -1,0 +1,11 @@
+plugins:
+  - jekyll-coffeescript
+  - jekyll-pug
+stylus:
+  compress: true
+  path: ./styles/
+defaults:
+  - scope:
+      path: "*.html"
+    values:
+      layout: "default"

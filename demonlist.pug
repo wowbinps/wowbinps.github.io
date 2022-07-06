@@ -1,0 +1,19 @@
+---
+---
+-var i = 0;
+	mixin demon(name ,id, video_url , verifier)
+		-i = i+1;
+		li
+			span.img
+				a(href=video_url target="_blank")
+					img(src="img/demons/"+name+".png" alt=name+" verification" width="1080px")
+			span.desc
+				h2 ##{i} #{name}
+				p(data-ru="верификатор: " + verifier data-eng="verified by: " + verifier)
+				p id: #{id}
+section.list.dl
+	ul
+		+demon("geterosexuality", 23, "https://drive.google.com/file/d/1WDKzoWOKMFJJCBvG2op6DUcmSfmZEqC7/view","EGGephant")
+		+demon("rainbow party", 11,"https://www.youtube.com/watch?v=Tr_qnm3lzbU", "Tims Team")
+		+demon("keres lights", 19, "https://www.youtube.com/watch?v=Dn2QLWeyzHI", "Lilys")
+		+demon("rejuvante", 44, "https://www.youtube.com/watch?v=F1fyRof25mg", "Arti")

@@ -1,0 +1,89 @@
+hyphens()
+	-ms-hyphens arguments
+	-moz-hyphens arguments
+	-webkit-hyphens arguments
+	hyphens arguments
+gradient()
+	args = arguments[0]
+	for index, i in 1 .. length(arguments) - 1
+		args = unquote("" + args + "," + arguments[index] + " ")
+	background linear-gradient(args)
+	background -webkit-linear-gradient(args)
+object-fit()
+	-o-object-fit arguments
+	object-fit arguments
+column-count()
+	-moz-column-count arguments
+	-webkit-column-count arguments
+	column-count arguments
+column-gap()
+	-moz-column-gap arguments
+	-webkit-column-gap arguments
+	column-gap arguments
+column-rule()
+	-moz-column-rule arguments
+	-webkit-column-rule arguments
+	column-rule arguments
+word-break()
+	-ms-word-break arguments
+	word-break arguments
+font-feature-settings()
+	-moz-font-feature-settings arguments
+	-webkit-font-feature-settings arguments
+	font-feature-settings arguments
+border-image()
+	-moz-border-image arguments
+	-o-border-image arguments
+	-webkit-border-image arguments
+	border-image arguments
+animation()
+	-moz-animation arguments
+	-o-animation arguments
+	-webkit-animation arguments
+	animation arguments
+appearance()
+	-moz-appearance arguments
+	-webkit-appearance arguments
+	appearance arguments
+transition()
+	-moz-transition arguments
+	-o-transition arguments
+	-webkit-transition arguments
+	transition arguments
+user-select()
+	-moz-user-select arguments
+	-ms-user-select arguments
+	-webkit-user-select arguments
+	user-select arguments
+background-clip()
+	-moz-background-clip arguments
+	-webkit-background-clip arguments
+	background-clip arguments
+display()
+	if arguments == flex
+		display -ms-flexbox
+		display -webkit-flex
+	else if arguments == grid
+		display -moz-grid
+		display -ms-grid
+	else if arguments == inline-grid
+		display -moz-inline-grid
+		display -ms-inline-grid
+	display arguments
+filter()
+	-ms-filter arguments
+	-webkit-filter arguments
+	filter arguments
+flex()
+	-ms-flex arguments
+	-webkit-flex arguments
+	flex arguments
+flex-direction()
+	-ms-flex-direction arguments
+	flex-direction arguments
+transform()
+	-moz-transform arguments
+	-ms-transform arguments
+	-o-transform arguments
+	-webkit-transform arguments
+	transform arguments

@@ -1,0 +1,10 @@
+---
+---
+mixin item(name,nameEng,price)
+	section
+		h2(data-ru=name + " " + price + "₽" data-eng=nameEng + " " + price * 0.016 + "$")
+		p(data-ru="что-бы заказать "+ name +" введите в сообщении *ваш ник на gdps*"
+		data-eng="to order "+nameEng+" send message with *your nickname*")
+		sub(data-ru="потом напишите Arti или Wowbin в лс что-бы они вам его выдали" data-eng="then type to Arti or Wowbin dm for get it")
+		a.buy(href="https://www.donationalerts.com/r/wowbinds_donat_" data-ru="Купить" data-eng="Buy")
++item("Модератор","Moderator",50)
