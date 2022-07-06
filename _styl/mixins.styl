@@ -1,8 +1,0 @@
-long-shadow(colour)
-	shadow = '0px 0px ' + colour
-	for i in 0..15
-		shadw = shadow + ', ' + i/15 + "rem " + i/15 + "rem " + hue(colour,i* 2deg)
-		shadow = shadw
-	margin-bottom 1rem
-	margin-right 1rem
-	text-shadow unquote(shadow)
