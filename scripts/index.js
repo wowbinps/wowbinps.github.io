@@ -12,34 +12,36 @@
   langSwithcer = document.querySelector("#switchLang");
 
   langSwithcer.addEventListener("click", function() {
-    if (currentLang === "ru") {
-      localStorage.setItem("language", "eng");
-    } else if (currentLang === "eng") {
-      localStorage.setItem("language", "ru");
+    switch (currentLang) {
+      case "ru":
+        localStorage.setItem("language", "eng");
+        break;
+      case "eng":
+        localStorage.setItem("language", "ru");
     }
     currentLang = localStorage.getItem("language");
     return switchLang();
   });
 
   switchLang = function() {
-    var el, i;
+    var i, j, k, len, len1, tag;
     i = 0;
-    if (currentLang === "ru") {
-      while (i < allTags.length) {
-        el = allTags[i];
-        if (el.dataset.ru !== void 0) {
-          el.innerHTML = el.dataset.ru;
+    switch (currentLang) {
+      case "ru":
+        for (j = 0, len = allTags.length; j < len; j++) {
+          tag = allTags[j];
+          if (tag.dataset.ru !== void 0) {
+            tag.innerHTML = tag.dataset.ru;
+          }
         }
-        i++;
-      }
-    } else if (currentLang === "eng") {
-      while (i < allTags.length) {
-        el = allTags[i];
-        if (el.dataset.eng !== void 0) {
-          el.innerHTML = el.dataset.eng;
+        break;
+      case "eng":
+        for (k = 0, len1 = allTags.length; k < len1; k++) {
+          tag = allTags[k];
+          if (tag.dataset.eng !== void 0) {
+            tag.innerHTML = tag.dataset.eng;
+          }
         }
-        i++;
-      }
     }
     return localStorage.setItem("language", currentLang);
   };
