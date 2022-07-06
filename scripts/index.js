@@ -47,3 +47,4 @@
   setTimeout(switchLang(), 200);
 
 }).call(this);
+ 
