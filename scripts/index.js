@@ -44,7 +44,6 @@
     return localStorage.setItem("language", currentLang);
   };
 
-  setTimeout(switchLang(), 200);
+  switchLang();
 
 }).call(this);
- 
