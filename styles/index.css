@@ -39,18 +39,27 @@ nav a {
   text-decoration: none;
 }
 nav #switchLang {
-  font-size: 1.5rem;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: auto;
   margin-right: 3rem;
   justify-self: flex-end;
 }
+nav #switchLang * {
+  height: 1.5rem;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
 nav #switchLang:hover {
-  text-shadow: none;
   -ms-filter: brightness(2.2) grayscale(25%);
   -webkit-filter: brightness(2.2) grayscale(25%);
   filter: brightness(2.2) grayscale(25%);
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 a {
   color: #f2f2f2;
@@ -233,12 +242,19 @@ li span img {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-  .hamburger ~ a,
-  .hamburger ~ #switchLang {
+  .hamburger ~ a {
     font-size: 0;
     display: inline-block;
     margin: 0;
+  }
+  .hamburger ~ #switchLang {
+    margin: 0;
     padding: 0;
+  }
+  .hamburger ~ #switchLang svg {
+    margin: 0;
+    padding: 0;
+    height: 0;
   }
   .hamburger:hover {
     cursor: pointer;
@@ -281,8 +297,8 @@ li span img {
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
   }
-  .hamburger.is-active ~ #switchLang {
-    font-size: 1.5rem;
+  .hamburger.is-active ~ #switchLang svg {
+    height: 1.5rem;
   }
   .hamburger.is-active:before {
     border: 2.5px solid #ecf0f1;
