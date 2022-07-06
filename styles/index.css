@@ -38,6 +38,20 @@ nav * {
 nav a {
   text-decoration: none;
 }
+nav #switchLang {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: 3rem;
+  justify-self: flex-end;
+}
+nav #switchLang:hover {
+  text-shadow: none;
+  -ms-filter: brightness(2.2) grayscale(25%);
+  -webkit-filter: brightness(2.2) grayscale(25%);
+  filter: brightness(2.2) grayscale(25%);
+}
 a {
   color: #f2f2f2;
   -moz-transition: 0.5s;
@@ -212,15 +226,19 @@ li span img {
 @media (max-width: 768px) {
   .hamburger {
     position: fixed;
-    left: 1rem;
-    top: 1rem;
+    left: 0.3rem;
+    top: 0.3rem;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-  .hamburger ~ a {
+  .hamburger ~ a,
+  .hamburger ~ #switchLang {
+    font-size: 0;
     display: inline-block;
+    margin: 0;
+    padding: 0;
   }
   .hamburger:hover {
     cursor: pointer;
@@ -259,8 +277,12 @@ li span img {
     transform: translateX(5px);
   }
   .hamburger.is-active ~ a {
-    display: inline;
     font-size: 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
+  .hamburger.is-active ~ #switchLang {
+    font-size: 1.5rem;
   }
   .hamburger.is-active:before {
     border: 2.5px solid #ecf0f1;
